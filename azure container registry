@@ -1,0 +1,12 @@
+ow to pull image from existing azure container registry?
+Login to your Azure account
+az login
+Login to Azure Container Registry
+az acr login --name $REGISTRY
+Pull your Image
+docker pull ${REGISTRY}.azurecr.io/${IMAGE}:${TAG}
+Optionnal: List your images
+az acr repository list -n $REGISTRY --output table
+--------------------------------------------------
+Docker image is not updating on Azure container registry via gitlab
+https://stackoverflow.com/questions/78399747/docker-image-is-not-updating-on-azure-container-registry-via-gitlab
